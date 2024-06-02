@@ -101,7 +101,6 @@ function editProduct(editedIndex) {
     updatedIndex = editedIndex;
 }
 
-
 var updatedIndex;
 function updateData() {
     addBtn.classList.remove("d-none");
