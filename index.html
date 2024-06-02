@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========== Website Title ========== -->
+    <title>CRUD</title>
+    <!-- ========== Website Icon ========== -->
+    <link rel="icon" href="images/icon.png">
+    <!-- ========== Bootstrap Link ========== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ========== CSS Minified Link ========== -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="w-75 mx-auto">
+                        <h1 class="text-center mb-4 header-dark">CRUD Project</h1>
+                        <div class="form-floating mb-3">
+                            <input type="text" oninput="validationInputs(this , 'msgTitle')" class="form-control"
+                                id="productTitle" placeholder="Product Title">
+                            <label for="productTitle">Product Title</label>
+                            <p id="msgTitle" class="alert alert-danger d-none">Invalid Title</p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" oninput="validationInputs(this , 'msgPrice')" class="form-control"
+                                id="productPrice" placeholder="Product Price">
+                            <label for="productPrice">Product Price</label>
+                            <p id="msgPrice" class="alert alert-danger d-none">Invalid Price</p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" oninput="validationInputs(this , 'msgCategory')" list="Categories"
+                                class="form-control" id="productCategory" placeholder="Product Category">
+                            <label for="productCategory">Product Category</label>
+                            <p id="msgCategory" class="alert alert-danger d-none">Invalid Category</p>
+                            <datalist id="Categories">
+                                <option value="TV" />
+                                <option value="Mobile" />
+                                <option value="Screens" />
+                                <option value="Laptops" />
+                                <option value="Watch" />
+                                <option value="Airpod" />
+                            </datalist>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="file" onchange="validationInputs(this , 'msgImage')" class="form-control"
+                                id="productImage" placeholder="Product Image">
+                            <!-- onchange="validationInputs(this , 'msgImage' )" -->
+                            <label for="productImage">Product Image</label>
+                            <p id="msgImage" class="alert alert-danger d-none">Invalid Image</p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea type="text" oninput="validationInputs(this , 'msgDesc')" class="form-control"
+                                id="productDesc" placeholder="Product Desc"></textarea>
+                            <label for="productDesc">Product Descripton</label>
+                            <p id="msgDesc" class="alert alert-danger d-none">Invalid Description</p>
+                        </div>
+                        <div class="d-flex">
+                            <button id="addBtn" class="btn btn-outline-dark me-3" onclick="addProduct()">Add
+                                Product</button>
+                            <button id="updateBtn" class="btn btn-outline-dark me-3 d-none"
+                                onclick="updateData()">Update
+                                Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-3">
+            <div class="container">
+                <div class="form-floating mb-5 w-75 mx-auto">
+                    <input type="search" class="form-control" id="productSearch" placeholder="Search by Name..."
+                        oninput="searchProduct()">
+                    <label for="productSearch">Search for a Product</label>
+                </div>
+                <div class="row gy-4" id="products">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- ========== Bootstrap JS link ========== -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ========== JS external Link ========== -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

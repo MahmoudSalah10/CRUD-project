@@ -1,0 +1,63 @@
+/* Global styles */
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('../fonts/DMSerifDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/DMSerifDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root{
+    --border-color: #555;
+    --box-shadow-color: #cecece;
+    --bg-linear: #1e1e1e;
+    --bg-lin: #333;
+    --header-shadow: rgba(0, 0, 0, 0.3);
+    --card-shadow: rgba(0, 0, 0, 0.15);
+    --card-border: #ddd;
+    --card-bg: #fff;
+    --font-family: 'DM Serif Display';
+}
+.header-dark {
+    font-family: var(--font-family);
+    font-size: 3rem;
+    color: #fff;
+    background: linear-gradient(45deg, var(--bg-linear), var(--bg-lin));
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 .25rem .5rem var(--header-shadow);
+    position: relative;
+}
+.form-control:focus {
+    border-color: var(--border-color);
+    box-shadow: 0 0 0 .25rem var(--box-shadow-color);
+}
+.card {
+    border: .0625rem solid var(--card-border);
+    border-radius: .625rem;
+    background-color: var(--card-bg);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 .25rem .75rem var(--card-shadow);
+}
+
+.card-img-top {
+    border-top-left-radius: .625rem;
+    border-top-right-radius: .625rem;
+}
+.card img{
+    height: 26rem;
+    object-fit: contain;
+}
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-text p {
+    margin-bottom: .9375rem;
+}
+
