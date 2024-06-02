@@ -6,7 +6,7 @@ var productDescInput = document.getElementById("productDesc");
 var productSearchInput = document.getElementById("productSearch");
 var addBtn = document.getElementById("addBtn");
 var updateBtn = document.getElementById("updateBtn")
-
+var productList = []
 
 
 
